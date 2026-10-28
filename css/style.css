@@ -944,43 +944,206 @@ img {
   fill: #5865F2;
 }
 
-/* --- Download Section --- */
+/* --- Download / Launcher Section --- */
 .download {
   background: var(--color-bg-alt);
   position: relative;
 }
 
-.download-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 50px;
+.download-launcher {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
 }
 
-.download-info h3 {
+/* --- Launcher Preview (mock window) --- */
+.launcher-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.launcher-window {
+  width: 100%;
+  max-width: 420px;
+  background: #0e0e16;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px var(--color-accent-glow);
+}
+
+.launcher-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #13131d;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.launcher-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.launcher-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.launcher-dots span:nth-child(1) { background: #ff5f57; }
+.launcher-dots span:nth-child(2) { background: #febc2e; }
+.launcher-dots span:nth-child(3) { background: #28c840; }
+
+.launcher-titlebar-text {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.launcher-body {
+  padding: 40px 30px 30px;
+  text-align: center;
+}
+
+.launcher-logo-area {
+  margin-bottom: 30px;
+}
+
+.launcher-logo-text {
+  display: block;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: var(--color-accent);
+  text-shadow: 0 0 30px var(--color-accent-glow);
+}
+
+.launcher-version {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  background: rgba(255,255,255,0.05);
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.launcher-progress {
+  margin-bottom: 24px;
+}
+
+.launcher-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.launcher-progress-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-dark), var(--color-accent));
+  border-radius: 4px;
+  animation: launcher-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes launcher-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.launcher-progress-label {
+  font-size: 0.75rem;
+  color: var(--color-green);
+  letter-spacing: 1px;
+}
+
+.launcher-play-btn {
+  display: inline-block;
+  padding: 12px 48px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  border-radius: 6px;
+  cursor: default;
+  box-shadow: 0 4px 20px var(--color-accent-glow);
+}
+
+/* --- Launcher Info --- */
+.launcher-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--color-text);
   margin-bottom: 12px;
 }
 
-.download-info p {
+.launcher-info p {
   color: var(--color-text-muted);
   line-height: 1.8;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.launcher-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.launcher-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.launcher-feature-icon {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(196, 160, 53, 0.08);
+  border: 1px solid rgba(196, 160, 53, 0.15);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.launcher-feature div {
+  display: flex;
+  flex-direction: column;
+}
+
+.launcher-feature strong {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.launcher-feature span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
 }
 
 .download-meta {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  margin-bottom: 28px;
 }
 
 .download-meta span {
@@ -997,8 +1160,13 @@ img {
 
 .download-actions {
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 0.95rem;
 }
 
 /* --- Footer --- */
@@ -1118,6 +1286,15 @@ img {
   .about-image {
     order: -1;
   }
+
+  .download-launcher {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .launcher-preview {
+    order: -1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1160,14 +1337,12 @@ img {
     padding: 40px 24px;
   }
 
-  .download-card {
-    grid-template-columns: 1fr;
-    padding: 30px;
+  .launcher-window {
+    max-width: 340px;
   }
 
   .download-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .footer-content {
