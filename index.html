@@ -21,6 +21,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌄%3C/text%3E%3C/svg%3E">
 
+  <link rel="alternate" hreflang="uk" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <script src="js/language.js"></script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -60,6 +64,11 @@
         </li>
       </ul>
 
+      <div class="language-switch" role="group" aria-label="Мова сайту">
+        <a href="index.html?lang=uk" lang="uk" hreflang="uk" data-language="uk" aria-current="true">UA</a>
+        <a href="en.html?lang=en" lang="en" hreflang="en" data-language="en" >EN</a>
+      </div>
+
       <div class="nav-toggle" aria-label="Відкрити меню">
         <span></span>
         <span></span>
@@ -94,7 +103,7 @@
         але прагнемо відтворити його атмосферу та дух у новому світі.
       </p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">
+        <a href="https://github.com/ObriyGame/Obriy/releases/download/Launcher_Setup_0.1.1/OBRIY_Launcher_Setup_0.1.1.exe" class="btn btn-primary">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
           Завантажити запускач
         </a>
@@ -158,6 +167,14 @@
           <img src="images/feature-explore.jpg" alt="Таємничі території Obriy" loading="lazy">
         </div>
       </div>
+
+      <aside class="development-notice" aria-labelledby="development-title">
+        <h3 id="development-title">Про стан розробки</h3>
+        <p><strong>OBRIY (ОБРІЙ)</strong> перебуває на стадії активної розробки та тестування. Проєкт постійно розвивається: вдосконалюються ігрові механіки, оптимізуються локації, додаються нові можливості та виправляються виявлені помилки.</p>
+        <p>Звертаємо вашу увагу, що <strong>поточна версія гри не є фінальним релізом</strong>. Деякі елементи можуть працювати нестабільно, змінюватися або перебувати на етапі реалізації.</p>
+        <p>Ми відкриті до конструктивних відгуків, зауважень і пропозицій, адже саме вони допомагають нам виявляти недоліки та поступово вдосконалювати OBRIY.</p>
+        <p><strong>Дякуємо за ваше розуміння, підтримку та участь у розвитку проєкту!</strong></p>
+      </aside>
     </div>
   </section>
 
@@ -230,45 +247,17 @@
       <div class="lore-content">
         <div class="section-header reveal">
           <span class="section-tag">Всесвіт</span>
-          <h2 class="section-title">Хронологія подій</h2>
-          <p class="section-desc">
-            Як світ Obriy поступово занурився в хаос та нову реальність
-          </p>
+          <h2 class="section-title">ОБРІЙ | OBRIY - Історія світу</h2>
         </div>
 
-        <div class="lore-timeline">
-          <div class="lore-item reveal">
-            <h4>Катастрофа</h4>
-            <p>
-              Серія техногенних аварій та природних аномалій призвела до незворотних змін 
-              у навколишньому середовищі. Великі території стали непридатними для життя, 
-              а флора та фауна почали мутувати непередбачуваним чином.
-            </p>
-          </div>
-          <div class="lore-item reveal reveal-delay-1">
-            <h4>Зони відчуження</h4>
-            <p>
-              Уряди встановили карантинні периметри навколо заражених територій. 
-              Але зони продовжували розширюватися, поглинаючи міста та села. 
-              Цивілізація у звичному розумінні припинила своє існування.
-            </p>
-          </div>
-          <div class="lore-item reveal reveal-delay-2">
-            <h4>Епоха фракцій</h4>
-            <p>
-              З хаосу виникли нові угруповання — від наукових експедицій до бандитських кланів. 
-              Кожна фракція має свою мету: одні шукають шлях до порятунку, 
-              інші — до влади над останніми ресурсами.
-            </p>
-          </div>
-          <div class="lore-item reveal reveal-delay-3">
-            <h4>Obriy — Новий горизонт</h4>
-            <p>
-              На межі виживання та відчаю з'являються чутки про «Обрій» — місце за межами зон, 
-              де природа нібито відновлюється. Ніхто не знає, чи це правда, але надія 
-              стає найдорожчою валютою нового світу.
-            </p>
-          </div>
+        <div class="lore-story">
+          <p class="reveal">Світ, яким ми його знали, залишився в минулому.</p>
+          <p class="reveal">Третя світова війна назавжди змінила обличчя планети. Зруйновані міста, радіаційне забруднення, аномалії та мутації стали наслідками людських рішень, які поставили під загрозу саме існування цивілізації.</p>
+          <p class="reveal">Там, де колись вирувало життя, тепер панують руїни й тиша. Природа поступово повертає собі втрачені території, поглинаючи залишки людського світу. Проте за її відродженням приховуються небезпеки, до яких людство виявилося неготовим.</p>
+          <p class="reveal">Ті, кому вдалося вижити, змушені пристосовуватися до нової реальності. Боротьба за території, ресурси та власне існування породжує нові протистояння. Людство, яке пережило глобальну катастрофу, так і не змогло знайти порозуміння навіть перед загрозою спільного зникнення.</p>
+          <p class="reveal">Але чи справді світ приречений повторювати помилки минулого?</p>
+          <p class="reveal"><strong>ОБРІЙ</strong> - це не лише межа між землею та небом. Це символ невідомого майбутнього, до якого прямує людство. Майбутнього, яке залежить від його сьогоднішніх рішень.</p>
+          <p class="reveal">Адже навіть після найтемнішої ночі над обрієм неодмінно зійде сонце. Та що саме освітять його перші промені - залишки зруйнованого світу чи початок нового життя?</p>
         </div>
       </div>
     </div>
@@ -352,7 +341,7 @@
         <span class="section-tag">Завантаження</span>
         <h2 class="section-title">Запускач Obriy</h2>
         <p class="section-desc">
-          Завантаж офіційний запускач — він встановить і оновить гру автоматично
+          Запускач встановить і оновить гру автоматично
         </p>
       </div>
 
@@ -370,7 +359,7 @@
             <div class="launcher-body">
               <div class="launcher-logo-area">
                 <span class="launcher-logo-text">OBRIY</span>
-                <span class="launcher-version">v1.0</span>
+                <span class="launcher-version">v0.1.1</span>
               </div>
               <div class="launcher-progress">
                 <div class="launcher-progress-bar">
@@ -417,20 +406,17 @@
 
           <div class="download-meta">
             <span>🖥️ Платформа: <strong>Windows 10/11</strong></span>
-            <span>📦 Розмір: <strong>~15 MB</strong></span>
+            <span>📦 Версія: <strong>0.1.1</strong></span>
             <span>💰 Ціна: <strong>Безкоштовно</strong></span>
           </div>
 
           <div class="download-actions">
-            <a href="https://drive.google.com/file/d/1UTmRkOX2iZ-ACycBd8rD-JXq78KioS4t/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <a href="https://github.com/ObriyGame/Obriy/releases/download/Launcher_Setup_0.1.1/OBRIY_Launcher_Setup_0.1.1.exe" class="btn btn-primary btn-lg">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
               Завантажити запускач
             </a>
-            <a href="https://fex.net/uk/s/rybddrk" target="_blank" rel="noopener" class="btn btn-outline">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Дзеркало (FEX.NET)
-            </a>
           </div>
+
         </div>
       </div>
     </div>
