@@ -1454,3 +1454,13 @@ img {
 }
 .development-notice p + p { margin-top: 16px; }
 .development-notice strong { color: var(--color-text); }
+
+/* GitHub counts downloads of the currently linked installer. */
+.download-counter {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  align-self: center;
+}
+.download-counter strong { color: var(--color-accent); }
+.download-actions { flex-wrap: wrap; }
