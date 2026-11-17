@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       preloader.classList.add('hidden');
       document.body.style.overflow = 'auto';
-    }, 2200);
+    }, 550);
   });
 
   // Fallback: hide preloader after 4s regardless
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.classList.add('hidden');
       document.body.style.overflow = 'auto';
     }
-  }, 4000);
+  }, 1000);
 
   // --- Navbar scroll effect ---
   const navbar = document.querySelector('.navbar');
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const suffix = element.getAttribute('data-suffix') || '';
     const prefix = element.getAttribute('data-prefix') || '';
     const targetNum = parseInt(target);
-    const duration = 2000;
+    const duration = 500;
     const startTime = performance.now();
 
     function updateCounter(currentTime) {
